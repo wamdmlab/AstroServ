@@ -1,0 +1,93 @@
+25) 2016.9.22
+25.1) 函数改名： acl_fiber_stop --> acl_fiber_schedule_stop,
+acl::fiber::stop --> acl::fiber::schedule_stop
+
+24) 2016.9.21
+24.1) bugfix: hook_io.c 中的 writev() 函数应该调用 fiber_writev()
+
+23) 2016.9.1
+23.1) feature: 支持 C++11 功能，使用 lambda 表达式创建协程更加方便简洁
+
+------------------------------------------------------------------------------
+
+22) 2016.8.25
+22.1) feature: hook_io.c 中提供了单独的 fiber_xxx IO 接口
+
+21) 2016.8.17
+21.1) performance: fiber.c 中函数 fiber_alloc 在创建协程栈时使用 malloc 代替了
+原来的 calloc，避免内存提交，仅使用虚存，从而有效控制了协程的实际占用内存大小
+21.2) bugfix: hook_io.c 中的 read 等读函数只有当读返回 < 0 时才需要设置 errno
+21.3) bugfix: fiber_io.c, acl_fiber_delay 函数需要合理设置 ev->timeout 值
+21.4) performance: hook_net.c 中 hook 的系统 accept API 优化了接收连接的顺序，
+从而使 accept 速度更快
+
+20) 2016.8.16
+20.1) portable: fiber.c 中增强了 SETJMP 汇编代码移植性
+
+19) 2016.8.10
+19.1) performance&feature: 允许使用 setjmp/longjmp 进行栈的跳转，性能更好
+
+18) 2016.8.7
+18.1) feature: fiber.c 中在 acl_fiber_schedule 结束前自动将 acl_var_hook_sys_api
+置 0，从而恢复系统 API 调用过程
+
+17) 2016.8.5
+17.1) feature: hook_io.c 中增加系统 API sleep 的 hook 函数
+
+16) 2016.8.4
+16.1) bugfix: hook_net.c 中的 gethostbyname_r 在解析域名时的地址所用字节序有误
+--- found by 陈晓勇
+
+15) 2016.7.28
+15.1) bugfix: hook_net.c 中的 poll/epoll_wait 对于超时的计数有误，会导致超时
+时间提前
+
+14) 2016.7.26
+14.1) feature: hook_net.c 中的 connect 函数增加了出错处理
+
+13) 2016.7.22
+13.1) bugfix: poll/epoll_wait API 的超时值设置的不对
+13.1) performance: fiber.c 中 acl_fiber_yield 函数首先判断是否有待处理协程，
+然后再决定是否需要切换协程上下文，从而减少上下文的切换次数
+
+12) 2016.7.14
+12.1) feature: hook_net.c 增加了 epoll 的 hook 支持
+
+11) 2016.7.9
+11.1) feature: fiber_sem.c 增加协程信号量
+
+10) 2016.6.22
+10.1) feature: fiber_server.c 服务模块支持空闲超时退出及处理连接数达上限退出
+
+9) 2016.6.21
+9.1) feature: 将非 socket 类型的 fd 采用同步模式
+9.2) feature: master_fiber.c 支持 dispatch 方式获得客户端连接
+
+8) 2016.6.19
+8.1) feature: 增加了 FIBER 锁功能
+8.2) feature: 增加 fiber_server.c 模块，可由 acl_master 服务器框架控制
+
+7) 2016.6.18
+7.1) feature: 增加了 FIBER_CHANNEL 用于协程间的交互通信
+
+6) 2016.6.15
+6.1) feature: 增加定时器功能 -- fiber_create_timer()
+
+5) 2016.6.14
+5.1) feature: hook 了 errno 所依赖的函数 __errno_location，从而使 errno 针对
+每个协程是安全的
+
+4) 2016.6.11
+4.1) valgrind: 增加编译开关以防止 valgrind 工具对 swapcontext 跳转的误报
+
+3) 2016.6.9
+3.1) performance: fiber_schedule.c，由星形切换改为环形切换，从而提升了上下文件
+切换的效率 --- by niukey@qq.com
+
+2) 2016.6.5
+2.1) feature: 将 fiber_schedule.c, fiber_io.c 中的全局静态变量调整为线程局部
+变量，为实现多线程化协程做准备
+
+1) 2016.6.4
+1.1) 当前的协程支持 hook: read/redv/redv/recvfrom/recvmsg,
+write/writev/send/sendto/sendmsg, poll/select/sleep/gethostbyname/gethostbyname_r

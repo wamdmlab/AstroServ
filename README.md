@@ -11,3 +11,4 @@ We in advance has built Aserv in gwac/ which the insertion component and query e
 `$ ./genTemplateStartSquirrel.sh //create template star table`</br>
 `$ ./sumLineAndDataSize.sh $observationNumber` //1920 times for 8 hours </br>
 
+# Query engine 

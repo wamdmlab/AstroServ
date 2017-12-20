@@ -1,0 +1,4 @@
+#!/bin/bash
+: > listen_cache.txt
+lsof -Pnl +M -i4 | grep 1984 | awk '{print $2}' | xargs kill >/dev/null 2>&1
+nc -lk 1984 >> listen_cache.txt

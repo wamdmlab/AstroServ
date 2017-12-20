@@ -1,0 +1,90 @@
+nc: Address already in use
+nc: Address already in use
+nc: Address already in use
+nc: Address already in use
+nc: Address already in use
+nc: Address already in use
+nc: Address already in use
+./listenStop.sh: line 3: 30733 Terminated              nc -lk 1986 >> listen_stop.txt
+./listenStop.sh: line 3: 22443 Terminated              nc -lk 1986 >> listen_stop.txt
+./listenStop.sh: line 3: 27811 Terminated              nc -lk 1986 >> listen_stop.txt
+nc: Address already in use
+./listenSlaves.sh: line 4: 18444 Terminated              nc -lk 1984 >> listen_cache.txt
+./listenSlaves.sh: line 4: 19255 Terminated              nc -lk 1984 >> listen_cache.txt
+./listenSlaves.sh: line 4: 11680 Terminated              nc -lk 1984 >> listen_cache.txt
+./listenSlaves.sh: line 4:  7313 Terminated              nc -lk 1984 >> listen_cache.txt
+./listenSlaves.sh: line 4:  2893 Terminated              nc -lk 1984 >> listen_cache.txt
+./listenSlaves.sh: line 4: 30784 Terminated              nc -lk 1984 >> listen_cache.txt
+./listenSlaves.sh: line 4: 25889 Terminated              nc -lk 1984 >> listen_cache.txt
+./listenSlaves.sh: line 4:  4810 Terminated              nc -lk 1984 >> listen_cache.txt
+./listenSlaves.sh: line 4: 29016 Terminated              nc -lk 1984 >> listen_cache.txt
+./listenSlaves.sh: line 4: 18146 Terminated              nc -lk 1984 >> listen_cache.txt
+Traceback (most recent call last):
+  File "./listenSlaves.py", line 37, in <module>
+    HOST, PORT = sys.argv[1], int(sys.argv[2])
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "./listenSlaves.py", line 37, in <module>
+    HOST, PORT = sys.argv[1], int(sys.argv[2])
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "./listenSlaves.py", line 45, in <module>
+    server = ThreadedTCPServer((HOST, PORT), ThreadedTCPRequestHandler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+Traceback (most recent call last):
+  File "./listenSlaves.py", line 45, in <module>
+    server = ThreadedTCPServer((HOST, PORT), ThreadedTCPRequestHandler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+Traceback (most recent call last):
+  File "./listenSlaves.py", line 45, in <module>
+    server = ThreadedTCPServer((HOST, PORT), ThreadedTCPRequestHandler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+Traceback (most recent call last):
+  File "./listenSlaves.py", line 45, in <module>
+    server = ThreadedTCPServer((HOST, PORT), ThreadedTCPRequestHandler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+Traceback (most recent call last):
+  File "./listenSlaves.py", line 45, in <module>
+    server = ThreadedTCPServer((HOST, PORT), ThreadedTCPRequestHandler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+Traceback (most recent call last):
+  File "./listenSlaves.py", line 45, in <module>
+    server = ThreadedTCPServer((HOST, PORT), ThreadedTCPRequestHandler)
+  File "/usr/lib/python2.7/SocketServer.py", line 419, in __init__
+    self.server_bind()
+  File "/usr/lib/python2.7/SocketServer.py", line 430, in server_bind
+    self.socket.bind(self.server_address)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+./killSend.sh: line 11: kill: (24331) - No such process

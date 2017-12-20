@@ -1,0 +1,5 @@
+#!/bin/bash
+: > listen_stop.txt
+lsof -Pnl +M -i4 | grep 1986 | awk '{print $2}' | xargs kill >/dev/null 2>&1
+nc -lk 1986 >>listen_stop.txt
+#wait $$ 2>/dev/null #suppress Terminated message

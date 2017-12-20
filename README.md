@@ -28,5 +28,6 @@ q6 -> stretching analysis</br>
 q7 -> listing analysis with PCSE</br>
 q8 -> listing analysis with EPI (need EPI's support)</br>
 
->Probing analysis:</br>
+##### Examples for query running  
+>Probing analysis running:</br>
 `query> q1 timeInterval($STARTTIME,$ENDTIME) pixelRound($X,$Y,$R)`

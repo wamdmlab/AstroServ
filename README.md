@@ -6,7 +6,7 @@ It is a distributed system for real-time and low latency scientific event analys
 Aserv includes insertion component (astroDB_cache), query engine (astroDB_cache_query) and key-value store (Redis cluster). We also provide a distributed data generator in gwac folder. The insertion component follows “master/slave” mode. It ingests the catalog file and load them into key-value store. Query engine supports three typical analysis methods including probing, listing and stretching.
 
 ## Getting Started
-We in advance has built Aserv in gwac/ which the insertion component and query engine in gwac/astroDB_cache/. We can run Aserv by:</br>
-`                        $ cd gwac/gwac_dbgen_cluster</br>`
-`                        $ ./genTemplateStartSquirrel.sh //create template star table</br>`
+We in advance has built Aserv in gwac/ which the insertion component and query engine in gwac/astroDB_cache/. We can try to run Aserv by:</br>
+`                        $ cd gwac/gwac_dbgen_cluster`</br>
+`                        $ ./genTemplateStartSquirrel.sh //create template star table`</br>
 

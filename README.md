@@ -7,6 +7,7 @@ Aserv includes insertion component (astroDB_cache), query engine (astroDB_cache_
 
 ## Getting Started
 We in advance has built Aserv in gwac/ which the insertion component and query engine in gwac/astroDB_cache/. We can try to run Aserv by:</br>
-`                        $ cd gwac/gwac_dbgen_cluster`</br>
-`                        $ ./genTemplateStartSquirrel.sh //create template star table`</br>
+`$ cd gwac/gwac_dbgen_cluster`</br>
+`$ ./genTemplateStartSquirrel.sh //create template star table`</br>
+`$ ./sumLineAndDataSize.sh $observationNumber` //1920 times for 8 hours </br>
 

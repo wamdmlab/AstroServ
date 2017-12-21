@@ -29,5 +29,13 @@ q7 -> listing analysis with PCSE</br>
 q8 -> listing analysis with EPI (need EPI's support)</br>
 
 ##### Examples for query running  
->Probing analysis running:</br>
-`query> q1 timeInterval($STARTTIME,$ENDTIME) pixelRound($X,$Y,$R)`
+When the query engine is launched, the aforementioned analytical queries can be executed by inputting:
+> Probing analysis:</br>
+`query> q1 timeInterval($STARTTIME,$ENDTIME) pixelRound($X,$Y,$R)`</br>
+> Listing analysis:</br>
+`query> q3 timeInterval($STARTTIME,$ENDTIME) pixelRound($X,$Y,$R)`</br>
+> stretching analysis:</br>
+`query> q6 timeInterval($STARTTIME,$ENDTIME) $OBJECT_ID` //an object id who appears scientific event
+
+# Contact us
+ <yangchenwo@126.com>

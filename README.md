@@ -34,7 +34,7 @@ When the query engine is launched, the aforementioned analytical queries can be 
 `query> q1 timeInterval($STARTTIME,$ENDTIME) pixelRound($X,$Y,$R)`</br>
 > Listing analysis:</br>
 `query> q3 timeInterval($STARTTIME,$ENDTIME) pixelRound($X,$Y,$R)`</br>
-> stretching analysis:</br>
+> Stretching analysis:</br>
 `query> q6 timeInterval($STARTTIME,$ENDTIME) $OBJECT_ID` //an object id who appears scientific event
 
 ## Contact us

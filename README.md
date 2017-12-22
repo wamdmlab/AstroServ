@@ -8,15 +8,15 @@ Aserv includes insertion component (astroDB_cache), query engine (astroDB_cache_
 ## Getting Started
 ### Catalog instertion
 Aserv is dependent on Ubuntu 14.04, and we in advance has built Aserv in gwac/ which the insertion component and query engine in gwac/astroDB_cache/. When Python 2.7 is installed, we can try to run Aserv's insertion component by:</br>
-`$ cd gwac/gwac_dbgen_cluster`</br>
-`$ ./genTemplateStartSquirrel.sh //create template star table`</br>
-`$ ./sumLineAndDataSize.sh $observationNumber` //1920 times for 8 hours </br>
+`# cd gwac/gwac_dbgen_cluster`</br>
+`# ./genTemplateStartSquirrel.sh //create template star table`</br>
+`# ./sumLineAndDataSize.sh $observationNumber` //1920 times for 8 hours </br>
 
 ### Query engine 
 We build query engine on Apache Spark 1.6.3 and spark-redis-0.3.2-jar-with-dependencies.jar is needed. </br> Run </br>
-`$ $SPARK_HOME/bin/spark-submit --class astroDB_query --master spark://$MASTER:7077 --jars $JARS/spark-redis-0.3.2-jar-with-dependencies.jar $HOME/gwac/astroDB_cache/astroDB_cache_query.jar -outputPath show -sliceNum $SLICE_NUM -redisHost $REDIS_IP:POST -ccdNumDefault $CCD_NUM -eachInterval $TIME`
+`# $SPARK_HOME/bin/spark-submit --class astroDB_query --master spark://$MASTER:7077 --jars $JARS/spark-redis-0.3.2-jar-with-dependencies.jar $HOME/gwac/astroDB_cache/astroDB_cache_query.jar -outputPath show -sliceNum $SLICE_NUM -redisHost $REDIS_IP:POST -ccdNumDefault $CCD_NUM -eachInterval $TIME`
 </br> to launch query engine. We provide a parameter example as follow: </br>
-`$ $SPARK_HOME/bin/spark-submit --class astroDB_query --master spark://$MASTER:7077 --jars $JARS/spark-redis-0.3.2-jar-with-dependencies.jar $HOME/gwac/astroDB_cache/astroDB_cache_query.jar -outputPath show -sliceNum 121 -redisHost $REDIS_IP:POST -ccdNumDefault 20 -eachInterval 15`
+`# $SPARK_HOME/bin/spark-submit --class astroDB_query --master spark://$MASTER:7077 --jars $JARS/spark-redis-0.3.2-jar-with-dependencies.jar $HOME/gwac/astroDB_cache/astroDB_cache_query.jar -outputPath show -sliceNum 121 -redisHost $REDIS_IP:POST -ccdNumDefault 20 -eachInterval 15`
 #### Queries
 We provide 8 queries: </br>
 q1 -> probing analysis with PCAG</br>

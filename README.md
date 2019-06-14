@@ -7,7 +7,7 @@ AstroServ includes insertion component (astroDB_cache), query engine (astroDB_ca
 
 ## Getting Started
 ### Catalog instertion
-AstroServ is dependent on Ubuntu 14.04, and we in advance has built 
+AstroServ is dependent on Ubuntu 14.04, and we in advance has built
 AstroServ in gwac/ which the insertion component and query engine in gwac/astroDB_cache/. When Python 2.7 is installed, we can try to run 
 AstroServ's insertion component by:</br>
 `# cd gwac/gwac_dbgen_cluster`</br>

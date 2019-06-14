@@ -1,4 +1,4 @@
-# AstroServ
+# AstroServ0.5
 ## Overview 
 It is a distributed system for real-time and low latency scientific event analysis for short-timescale and large field of view sky survey, such as GWAC. The Ground-based Wide-Angle Camera array (GWAC), a part of the SVOM space mission, will search for optical transients of various types by continuously imaging a field-of-view (FOV) of 5000 degrees2 in every 15 seconds. Each exposure consists of20x4kx4k pixels, typically resulting in 20x ~175,600 extracted sources. 
 ## AstroServ's framework
